@@ -37,7 +37,7 @@ class ProductType{
             'has_archive'        => true,
             'hierarchical'       => false,
             'menu_position'      => 60,
-            'menu_icon'          => 'dashicons-tag',
+            'menu_icon'          => 'dashicons-products',
             'supports'           => array( 'title', 'editor', 'author', 'thumbnail', )
         );
         register_post_type('product', $args);
@@ -46,17 +46,17 @@ class ProductType{
      public function register_taxonomy()
      {
          $labels = array(
-             'name' => _x('Product Category', 'taxonomy general name'),
-             'singular_name' => _x('Category', 'taxonomy singular name'),
-             'search_items' => __('Search Category'),
-             'all_items' => __('All Categories'),
-             'parent_item' => __('Parent Category'),
-             'parent_item_colon' => __('Parent Category:'),
-             'edit_item' => __('Edit Category'),
-             'update_item' => __('Update Category'),
-             'add_new_item' => __('Add New Category'),
-             'new_item_name' => __('New Category Name'),
-             'menu_name' => __('Categories Experts'),
+             'name' => _x('Product Category', 'taxonomy general name', 'withlove'),
+             'singular_name' => _x('Category', 'taxonomy singular name', 'withlove'),
+             'search_items' => __('Search Category', 'withlove'),
+             'all_items' => __('All Categories', 'withlove'),
+             'parent_item' => __('Parent Category', 'withlove'),
+             'parent_item_colon' => __('Parent Category:', 'withlove'),
+             'edit_item' => __('Edit Category', 'withlove'),
+             'update_item' => __('Update Category', 'withlove'),
+             'add_new_item' => __('Add New Category', 'withlove'),
+             'new_item_name' => __('New Category Name', 'withlove'),
+             'menu_name' => __('Category', 'withlove'),
          );
 
          $args = array(

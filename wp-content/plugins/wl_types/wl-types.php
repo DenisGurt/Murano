@@ -8,4 +8,4 @@
 */
 
 require_once "classes/product.php";
-new TestimonialType();
+new ProductType();
