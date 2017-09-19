@@ -1,0 +1,73 @@
+<?php
+
+class ProductType{
+
+    function __construct(){
+        add_action('init', array($this, 'register_type'));
+        add_action('init', array($this, 'register_taxonomy'));
+    }
+
+    public function register_type() {
+        $labels = array(
+            'name'               => _x( 'Products', 'post type general name', 'withlove' ),
+            'singular_name'      => _x( 'Product', 'post type singular name', 'withlove' ),
+            'menu_name'          => _x( 'Products', 'admin menu', 'withlove' ),
+            'name_admin_bar'     => _x( 'Products', 'add new on admin bar', 'withlove' ),
+            'add_new'            => _x( 'Add Product', 'brand', 'withlove' ),
+            'add_new_item'       => __( 'Add new Product', 'withlove' ),
+            'new_item'           => __( 'New Product', 'withlove' ),
+            'edit_item'          => __( 'Edit Product', 'withlove' ),
+            'view_item'          => __( 'View Product', 'withlove' ),
+            'all_items'          => __( 'All Products', 'withlove' ),
+            'search_items'       => __( 'Search Product', 'withlove' ),
+            'parent_item_colon'  => __( 'Product Parent:', 'withlove' ),
+            'not_found'          => __( 'Not found Product', 'withlove' ),
+            'not_found_in_trash' => __( 'No found Product in trash', 'withlove' )
+        );
+        $args = array(
+            'labels'             => $labels,
+            'description'        => __( 'Description', 'withlove' ),
+            'public'             => true,
+            'publicly_queryable' => false,
+            'show_ui'            => true,
+            'show_in_menu'       => true,
+            'query_var'          => true,
+            'rewrite'            => array( 'slug' => 'product', 'with_front' => false ),
+            'capability_type'    => 'post',
+            'has_archive'        => true,
+            'hierarchical'       => false,
+            'menu_position'      => 60,
+            'menu_icon'          => 'dashicons-tag',
+            'supports'           => array( 'title', 'editor', 'author', 'thumbnail', )
+        );
+        register_post_type('product', $args);
+    }
+
+     public function register_taxonomy()
+     {
+         $labels = array(
+             'name' => _x('Product Category', 'taxonomy general name'),
+             'singular_name' => _x('Category', 'taxonomy singular name'),
+             'search_items' => __('Search Category'),
+             'all_items' => __('All Categories'),
+             'parent_item' => __('Parent Category'),
+             'parent_item_colon' => __('Parent Category:'),
+             'edit_item' => __('Edit Category'),
+             'update_item' => __('Update Category'),
+             'add_new_item' => __('Add New Category'),
+             'new_item_name' => __('New Category Name'),
+             'menu_name' => __('Categories Experts'),
+         );
+
+         $args = array(
+             'hierarchical' => true,
+             'labels' => $labels,
+             'show_ui' => true,
+             'show_admin_column' => true,
+             'query_var' => true,
+         );
+
+         register_taxonomy('product_cat', array('product'), $args);
+     }
+
+}

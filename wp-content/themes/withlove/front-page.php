@@ -14,8 +14,12 @@
 
 get_header(); ?>
 
-    <?php the_title('<h1 class="sr-only">', '</h1>'); ?>
+<?php the_title('<h1 class="sr-only">', '</h1>'); ?>
 
+<?php get_sidebar('home'); ?>
 
+    <section class="home__slider">
+
+    </section>
 
 <?php get_footer(); ?>
