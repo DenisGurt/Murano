@@ -26,10 +26,10 @@
 
 <body <?php body_class(); ?>>
 
-<div id="page" class="site">
+    <div id="page" class="site">
 
-    <header class="header">
-        <!-- Header section -->
+        <header class="header">
+            <!-- Header section -->
 
-    </header>
+        </header>
 

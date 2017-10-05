@@ -28,6 +28,8 @@ var vendor = [
     // 'node_modules/bootstrap/js/src/util.js',
     // 'node_modules/bootstrap/js/src/collapse.js',
     // 'node_modules/bootstrap/js/src/modal.js',
+    // 'node_modules/owl.carousel/dist/owl.carousel.min.js',
+    'node_modules/slick-carousel/slick/slick.min.js',
     // 'node_modules/jquery-countdown/dist/jquery.countdown.min.js',
     // 'node_modules/scrollreveal/dist/scrollreveal.min.js',
     'libs/**/*.js'

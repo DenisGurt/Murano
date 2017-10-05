@@ -19,7 +19,16 @@ get_header(); ?>
 <?php get_sidebar('home'); ?>
 
     <section class="home__slider">
-
+        <div class="home__slider__item" style="background-image: url(<?php echo get_stylesheet_directory_uri() ?>/assets/images/slide1.jpg);" alt="">
+            <div class="home__slider__content">
+                Slide1
+            </div>
+        </div>
+        <div class="home__slider__item" style="background-image: url(<?php echo get_stylesheet_directory_uri() ?>/assets/images/slide2.png);" alt="">
+            <div class="home__slider__content">
+                Slide2
+            </div>
+        </div>
     </section>
 
 <?php get_footer(); ?>

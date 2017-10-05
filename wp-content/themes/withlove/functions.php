@@ -256,6 +256,11 @@ add_action('wp','custom_error_pages');
 require get_parent_theme_file_path( '/inc/customizer.php' );
 
 /**
+ * Taxonomy meta
+ */
+require get_parent_theme_file_path( '/inc/tax-meta.php' );
+
+/**
  * Restrict mime types
  */
-require get_parent_theme_file_path( '/inc/restrict-mime-types.php' );
+//require get_parent_theme_file_path( '/inc/restrict-mime-types.php' );
