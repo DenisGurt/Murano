@@ -18,17 +18,34 @@ get_header(); ?>
 
 <?php get_sidebar('home'); ?>
 
-    <section class="home__slider">
-        <div class="home__slider__item" style="background-image: url(<?php echo get_stylesheet_directory_uri() ?>/assets/images/slide1.jpg);" alt="">
-            <div class="home__slider__content">
-                Slide1
-            </div>
-        </div>
-        <div class="home__slider__item" style="background-image: url(<?php echo get_stylesheet_directory_uri() ?>/assets/images/slide2.png);" alt="">
-            <div class="home__slider__content">
-                Slide2
-            </div>
-        </div>
-    </section>
+<?php
+$args = array(
+    'taxonomy' => 'product_cat',
+    'hide_empty' => false,
+);
+$terms = get_terms( $args );
+?>
+    <?php if ($terms) : ?>
+        <section class="home__slider">
+            <?php foreach ($terms as $key => $term) : ?>
+                <?php
+                $image = get_field('cat_bg', 'term_'.$term->term_id);
+                $bg_src = get_stylesheet_directory_uri() . '/assets/images/slide1.jpg';
+
+                if( $image ) {
+                    $bg_src = $image['sizes']['wl-large'];
+                }
+
+                ?>
+                <div class="home__slider__item" style="background-image: url(<?php echo $bg_src; ?>)">
+                    <div class="home__slider__content term">
+                        <h2 class="term__title"><?php echo $term->name; ?></h2>
+                        <div class="term__description"><?php echo $term->description; ?></div>
+                        <a href="<?php echo get_category_link($term->term_id); ?>" class="term__link"><?php echo $term->name; ?></a>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </section>
+    <?php endif; ?>
 
 <?php get_footer(); ?>
