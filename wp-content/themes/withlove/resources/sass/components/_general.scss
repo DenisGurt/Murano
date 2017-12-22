@@ -4,8 +4,15 @@ html,
   height: 100%;
 }
 
-section {
-  .section__bg{
+.section {
+  &__bg {
+    height: 100vh;
+    background-position: 50%;
+    background-size: cover;
+    background-color: #212121;
+    color: #fff;
+    padding-top: 225px;
+    padding-bottom: 225px;
     &:before {
       content: "";
       background: linear-gradient(90deg,rgba(0,0,0,.7) 0,transparent);
