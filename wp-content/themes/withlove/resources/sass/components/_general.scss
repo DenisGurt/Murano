@@ -1,6 +1,11 @@
+* {
+ box-sizing: border-box;
+}
 body,
 html,
 #page {
+  font-family: $text_ff;
+  font-size: 18px;
   height: 100%;
 }
 
@@ -25,4 +30,9 @@ html,
       z-index: 0;
     }
   }
+}
+
+img {
+  width: 100%;
+  height: auto;
 }

@@ -1,11 +1,35 @@
-//Kalam
+// Allyson Pro
 
-//@font-face {
-//  font-family: 'Kalam';
-//  src:  url('../fonts/Kalam/Kalam-Bold.eot');
-//  src:  url('../fonts/Kalam/Kalam-Bold.woff') format('woff'),
-//  url('../fonts/Kalam/Kalam-Bold.eot#iefix') format('embedded-opentype'),
-//  url('../fonts/Kalam/Kalam-Bold.ttf') format('truetype');
-//  font-weight: $bold_fw;
-//  font-style: normal;
-//}
+@font-face {
+  font-family: 'Allyson Pro';
+  src:  url('../fonts/allyson-pro/Allyson-Pro.eot');
+  src:  url('../fonts/allyson-pro/Allyson-Pro.woff') format('woff'),
+  url('../fonts/allyson-pro/Allyson-Pro.eot#iefix') format('embedded-opentype'),
+  url('../fonts/allyson-pro/Allyson-Pro.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Oswald
+
+@font-face {
+  font-family: 'Oswald';
+  src:  url('../fonts/oswald/Oswald-Regular.eot');
+  src:  url('../fonts/oswald/Oswald-Regular.woff') format('woff'),
+  url('../fonts/oswald/Oswald-Regular.eot#iefix') format('embedded-opentype'),
+  url('../fonts/oswald/Oswald-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Great Vibes
+
+@font-face {
+  font-family: 'Great Vibes';
+  src:  url('../fonts/great-vibes/Great-Vibes.eot');
+  src:  url('../fonts/great-vibes/Great-Vibes.woff') format('woff'),
+  url('../fonts/great-vibes/Great-Vibes.eot#iefix') format('embedded-opentype'),
+  url('../fonts/great-vibes/Great-Vibes.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

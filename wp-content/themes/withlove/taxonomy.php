@@ -11,7 +11,8 @@
  * @since 1.0
  * @version 1.0
  */
-$term_id = get_queried_object()->term_id;
+$term_obj = get_queried_object();
+$term_id = $term_obj->term_id;
 $term_slug = get_query_var('product_cat');
 $image = get_field('cat_bg', 'term_'.$term_id);
 $bg_src = get_stylesheet_directory_uri() . '/assets/images/slide1.jpg';
@@ -24,8 +25,27 @@ get_header(); ?>
 
 <?php the_title('<h1 class="sr-only">', '</h1>'); ?>
 
-<?php get_sidebar(); ?>
+<div id="category">
+    <div id="sidebar">
+        <?php get_sidebar(); ?>
+    </div>
 
-<section class="section section__bg" style="background-image: url(<?php echo $bg_src; ?>);"></section>
+    <div id="content">
+        <section class="e banner" style="background-image: url(<?php echo $bg_src; ?>);">
+            <div class="banner__wrap">
+                <h1 class="banner__title">
+                    <?php echo $term_obj->name; ?>
+                </h1>
+                <div class="banner__description">
+                    <?php echo $term_obj->description;?>
+                </div>
+            </div>
+        </section>
+
+        <section class="filtering"></section>
+
+        <?php get_template_part('/templates/parts/category/product-list'); ?>
+    </div>
+</div>
 
 <?php get_footer(); ?>

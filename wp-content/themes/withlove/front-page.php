@@ -39,9 +39,14 @@ $terms = get_terms( $args );
                 ?>
                 <div class="home__slider__item" style="background-image: url(<?php echo $bg_src; ?>)">
                     <div class="home__slider__content term">
-                        <h2 class="term__title"><?php echo $term->name; ?></h2>
-                        <div class="term__description"><?php echo $term->description; ?></div>
-                        <a href="<?php echo get_category_link($term->term_id); ?>" class="term__link"><?php echo $term->name; ?></a>
+                        <h2 class="term__title">
+                            <?php echo $term->name; ?>
+                        </h2>
+                        <p></p>
+<!--                        <div class="term__description">--><?php //echo $term->description; ?><!--</div>-->
+                        <a href="<?php echo get_category_link($term->term_id); ?>" class="term__link">
+                            <?php echo __('More about', THEME_OPT) . ' ' . $term->name; ?>
+                        </a>
                     </div>
                 </div>
             <?php endforeach; ?>

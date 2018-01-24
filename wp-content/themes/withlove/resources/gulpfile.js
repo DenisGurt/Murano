@@ -2,8 +2,8 @@ var gulp = require('gulp'),
     sass = require('gulp-sass');
 
 var concat = require('gulp-concat'),
-    rename = require('gulp-rename'),
-    uglify = require('gulp-uglify-es').default;
+    rename = require('gulp-rename');
+    /* TODO add uglify */
 
 gulp.task('scss', function() {
     gulp.src('sass/global.scss')
@@ -17,7 +17,7 @@ gulp.task('scripts', function() {
         .pipe(concat('scripts.js'))
         .pipe(gulp.dest('../assets/js'))
         .pipe(rename('scripts.min.js'))
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(gulp.dest('../assets/js'));
 });
 
@@ -40,7 +40,7 @@ gulp.task('libs-scripts', function() {
         .pipe(concat('libs-scripts.js'))
         .pipe(gulp.dest('../assets/js'))
         .pipe(rename('libs-scripts.min.js'))
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(gulp.dest('../assets/js'));
 });
 
