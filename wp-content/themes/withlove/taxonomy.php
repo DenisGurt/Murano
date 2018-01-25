@@ -42,7 +42,9 @@ get_header(); ?>
             </div>
         </section>
 
-        <section class="filtering"></section>
+        <section class="filtering">
+            <h2 style="padding: 20px 50px;">Filtering</h2>
+        </section>
 
         <?php get_template_part('/templates/parts/category/product-list'); ?>
     </div>

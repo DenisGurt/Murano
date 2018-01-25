@@ -23,8 +23,17 @@ if ($query->have_posts()) :
                 <?php the_post_thumbnail('large'); ?>
             </div>
             <div class="content">
-                <?php the_title('<h3 class="product__title">', '</h3>') ?>
+                <?php the_title('<h3 class="product__title"><span>', '</span></h3>') ?>
                 <div class="product__desc"><?php the_content(); ?></div>
+                <div class="gallery">
+                    <a href="#" class="gallery__class"><?php _e('Gallery', THEME_OPT); ?></a>
+                </div>
+                <div class="price">
+                    <div class="price__wrap">
+                        <span class="price__title"><?php _e('Price', THEME_OPT); ?></span>
+                        <span class="price__value"><?php _e('From'); ?> <?php the_field('price'); ?> &euro;</span>
+                    </div>
+                </div>
             </div>
         </section>
     <?php

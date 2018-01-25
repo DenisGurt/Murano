@@ -36,3 +36,12 @@ img {
   width: 100%;
   height: auto;
 }
+
+a {
+  color: $main-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $main-color;
+  }
+}

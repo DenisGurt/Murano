@@ -9,6 +9,7 @@
   }
 }
 
+/* Banner */
 .banner {
   background-size: cover;
   position: relative;
@@ -22,7 +23,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(72, 72, 72, 0.4);
+    background-color: rgba(0,0,0,.4);
     z-index: 1;
   }
 
@@ -35,6 +36,7 @@
   &__title {
     display: inline-block;
     color: #fff;
+    font-family: $heading_ff;
     font-size: 70px;
     padding-bottom: 20px;
     margin-bottom: 30px;
@@ -45,6 +47,12 @@
   }
 }
 
+/* Filtering */
+.filtering {
+  padding: 50px 0;
+}
+
+/* Product */
 .product {
   display: flex;
 
@@ -56,7 +64,41 @@
   }
   .content {
     width: 60%;
-    padding: 20px;
+    padding: 50px 100px;
     background: linear-gradient(180deg,#e0e0e0 0,#efefef);
+  }
+  &__title {
+    font-family: $heading_ff;
+    span {
+      display: inline-block;
+      border-bottom: 2px solid #116062;
+      padding: 0 0 10px;
+      margin: 0 0 20px;
+    }
+  }
+  &__content {
+    font-family: $text_ff;
+  }
+
+  .gallery {
+    margin: 0 0 20px;
+  }
+
+  .price {
+    &__wrap {
+      background-color: #fff;
+      display: inline-block;
+      padding: 10px;
+    }
+    &__title {
+      font-size: 14px;
+      padding: 0 0 5px;
+    }
+    &__value {
+      display: block;
+      font-family: $heading_ff;
+      font-size: 20px;
+      font-weight: bold;
+    }
   }
 }
