@@ -28,17 +28,17 @@ class ProductType{
             'labels'             => $labels,
             'description'        => __( 'Description', 'withlove' ),
             'public'             => true,
-            'publicly_queryable' => false,
+            'publicly_queryable' => true,
             'show_ui'            => true,
             'show_in_menu'       => true,
             'query_var'          => true,
-            'rewrite'            => array( 'slug' => 'product', 'with_front' => false ),
+            'rewrite'            => array( 'slug' => 'product', 'with_front' => true ),
             'capability_type'    => 'post',
             'has_archive'        => true,
             'hierarchical'       => false,
             'menu_position'      => 60,
             'menu_icon'          => 'dashicons-products',
-            'supports'           => array( 'title', 'editor', 'author', 'thumbnail', )
+            'supports'           => array( 'title', 'editor' )
         );
         register_post_type('product', $args);
     }

@@ -249,6 +249,30 @@ function custom_error_class($classes)
 
 add_action('wp','custom_error_pages');
 
+// Custom ACF options translation
+function trans_acf_option($field = '') {
+    $strpos = strpos($field, '|');
+    if ($strpos) {
+        $titles = preg_split('/\|/', $field);
+        if (get_locale() === 'it_IT') {
+            $field = $titles[1];
+        } elseif (get_locale() === 'ru_RU') {
+            $field = $titles[2];
+        } else {
+            $field = $titles[0];
+        }
+    }
+
+    return $field;
+}
+
+/**
+ * Sorting price array by amount
+ * Closure
+ */
+function sort_by_amount($a, $b) {
+    return $a['amount'] - $b['amount'];
+}
 
 /**
  * Customizer additions.

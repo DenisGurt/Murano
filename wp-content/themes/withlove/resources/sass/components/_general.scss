@@ -5,7 +5,7 @@ body,
 html,
 #page {
   font-family: $text_ff;
-  font-size: 18px;
+  font-size: 15px;
   height: 100%;
 }
 
@@ -43,5 +43,19 @@ a {
 
   &:hover {
     color: $main-color;
+  }
+}
+
+.btn {
+  background-color: $main-color;
+  text-transform: uppercase;
+  font-family: $heading_ff;
+  color: #fff;
+  border-right: 2px;
+  transition: $transition;
+
+  &:hover {
+    background-color: $main-color + #111;
+    color: #fff;
   }
 }

@@ -16,45 +16,40 @@
   }
 
   .nav__link {
-    display: block;
     border-bottom: none;
     border-right: 2px solid transparent;
     box-shadow: inset 0 1px 0 0 hsla(0,0%,100%,0);
 
-    &:hover {
-      opacity: 1;
-      background-color: #f9f9f9;
-    }
 
     a {
-      padding: 10px 20px;
       display: inline-block;
+      width: 100%;
+      padding: 10px 20px;
 
       &:hover {
+        opacity: 1;
+        background-color: #f9f9f9;
         text-decoration: none;
       }
 
-      & > span {
-        opacity: .8;
-        font-family: $heading_ff;
-        font-size: .8em;
-        font-weight: 500;
-        color: #212121;
-        text-transform: uppercase;
-      }
+      opacity: .8;
+      font-family: $heading_ff;
+      font-size: 15px;
+      font-weight: 500;
+      color: #212121;
+      text-transform: uppercase;
     }
 
     &--active {
       opacity: 1;
       border-color: $main-color;
-      background-color: $main-color;
 
-      &:hover {
-        background-color: $main-color + #111;
-      }
-
-      a > span {
+      a {
+        background-color: $main-color;
         color: #fff;
+        &:hover {
+          background-color: $main-color + #111;
+        }
       }
     }
   }

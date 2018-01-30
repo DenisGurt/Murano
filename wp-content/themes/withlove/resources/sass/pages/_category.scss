@@ -3,6 +3,7 @@
 
   #sidebar {
     width: 170px;
+    box-shadow: 3px 0 6px rgba(0,0,0,.1);
   }
   #content {
     width: calc(100% - 170px);
@@ -13,7 +14,7 @@
 .banner {
   background-size: cover;
   position: relative;
-  padding: 100px 0;
+  padding: 100px;
 
   &:before {
     content: '';
@@ -28,7 +29,7 @@
   }
 
   &__wrap {
-    padding: 0 50px;
+    max-width: 900px;
     position: relative;
     z-index: 2;
   }
@@ -49,23 +50,29 @@
 
 /* Filtering */
 .filtering {
-  padding: 50px 0;
+  padding: 50px 100px;
+  &__title {
+    font-family: $heading_ff;
+    text-transform: uppercase;
+  }
 }
 
 /* Product */
 .product {
   display: flex;
+  align-items: center;
+  background: linear-gradient(180deg,#e0e0e0 0,#efefef);
 
-  &:nth-child(even) {
+  //&:nth-child(even) {
     flex-direction: row-reverse;
-  }
+  //}
   .thumbnail {
     width: 40%;
+    padding: 30px;
   }
   .content {
     width: 60%;
-    padding: 50px 100px;
-    background: linear-gradient(180deg,#e0e0e0 0,#efefef);
+    padding: 40px 100px;
   }
   &__title {
     font-family: $heading_ff;
@@ -76,8 +83,9 @@
       margin: 0 0 20px;
     }
   }
-  &__content {
+  &__desc {
     font-family: $text_ff;
+    max-width: 500px;
   }
 
   .gallery {
@@ -85,20 +93,48 @@
   }
 
   .price {
+    display: flex;
     &__wrap {
       background-color: #fff;
       display: inline-block;
-      padding: 10px;
+      padding: 5px 20px;
+      margin: 40px 0 20px;
+      &.left {
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+      }
+      &.right {
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        border-left: 1px solid #e0e0e0;
+      }
+      &.single {
+        border-radius: 4px;
+      }
     }
+
     &__title {
-      font-size: 14px;
+      color: #505455;
+      text-transform: uppercase;
+      font-size: 12px;
       padding: 0 0 5px;
+      font-weight: bold;
     }
     &__value {
       display: block;
       font-family: $heading_ff;
       font-size: 20px;
       font-weight: bold;
+    }
+  }
+  .buttons {
+  }
+  .order-btn {
+    background-color: #212121;
+    color: #fff;
+    &:hover {
+      color: #fff;
+      background-color: #212121 + #111;
     }
   }
 }

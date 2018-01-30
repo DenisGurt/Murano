@@ -44,7 +44,7 @@ $terms = get_terms( $args );
                         </h2>
                         <p></p>
 <!--                        <div class="term__description">--><?php //echo $term->description; ?><!--</div>-->
-                        <a href="<?php echo get_category_link($term->term_id); ?>" class="term__link">
+                        <a href="<?php echo get_category_link($term->term_id); ?>" class="btn term__link">
                             <?php echo __('More about', THEME_OPT) . ' ' . $term->name; ?>
                         </a>
                     </div>

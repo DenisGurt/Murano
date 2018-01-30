@@ -17,7 +17,7 @@ $term_slug = get_query_var('product_cat');
 $image = get_field('cat_bg', 'term_'.$term_id);
 $bg_src = get_stylesheet_directory_uri() . '/assets/images/slide1.jpg';
 
-if( $image ) {
+if ($image) {
     $bg_src = $image['sizes']['wl-large'];
 }
 
@@ -31,7 +31,7 @@ get_header(); ?>
     </div>
 
     <div id="content">
-        <section class="e banner" style="background-image: url(<?php echo $bg_src; ?>);">
+        <section class="banner" style="background-image: url(<?php echo $bg_src; ?>);">
             <div class="banner__wrap">
                 <h1 class="banner__title">
                     <?php echo $term_obj->name; ?>
@@ -42,11 +42,9 @@ get_header(); ?>
             </div>
         </section>
 
-        <section class="filtering">
-            <h2 style="padding: 20px 50px;">Filtering</h2>
-        </section>
+        <?php get_template_part('/templates/parts/category/filtering/filter', $term_slug); ?>
 
-        <?php get_template_part('/templates/parts/category/product-list'); ?>
+        <?php get_template_part('/templates/parts/category/list/' . $term_slug); ?>
     </div>
 </div>
 
