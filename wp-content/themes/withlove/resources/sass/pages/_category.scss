@@ -90,6 +90,12 @@
 
   .gallery {
     margin: 0 0 20px;
+
+    &__link {
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
   }
 
   .price {
@@ -127,14 +133,12 @@
       font-weight: bold;
     }
   }
-  .buttons {
-  }
-  .order-btn {
-    background-color: #212121;
+}
+.order-btn {
+  background-color: #212121;
+  color: #fff;
+  &:hover {
     color: #fff;
-    &:hover {
-      color: #fff;
-      background-color: #212121 + #111;
-    }
+    background-color: #212121 + #111;
   }
 }

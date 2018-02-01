@@ -1,0 +1,13 @@
+.table {
+  &.param {
+    width: 400px;
+  }
+  th {
+    background-color: $main-color;
+    color: #fff;
+    font-weight: normal;
+  }
+  td {
+    font-size: 14px;
+  }
+}

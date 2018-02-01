@@ -1,0 +1,45 @@
+#product {
+  display: flex;
+
+  #sidebar {
+    width: 170px;
+    box-shadow: 3px 0 6px rgba(0,0,0,.1);
+  }
+  #content {
+    width: calc(100% - 170px);
+  }
+}
+
+.product-cart {
+  display: flex;
+  align-items: center;
+  padding: 20px 100px;
+  background: linear-gradient(180deg,#e0e0e0 0,#efefef);
+  height: 100vh;
+
+  &__desc {
+    width: 60%;
+    padding: 0 50px 0 0;
+  }
+  &__thumb {
+    width: 40%;
+  }
+}
+
+.gallery {
+  padding: 0 0 40px;
+  &__link {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $main-color;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  svg {
+    height: 10px;
+    padding-right: 5px;
+  }
+}

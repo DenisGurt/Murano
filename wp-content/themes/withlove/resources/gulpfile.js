@@ -30,6 +30,10 @@ var vendor = [
     // 'node_modules/bootstrap/js/src/modal.js',
     // 'node_modules/owl.carousel/dist/owl.carousel.min.js',
     'node_modules/slick-carousel/slick/slick.min.js',
+    'node_modules/lightgallery/dist/js/lightgallery-all.min.js',
+    // 'node_modules/lightgallery/modules/lg-thumbnail.min.js',
+    // 'node_modules/lg-thumbnail/dist/lg-thumbnail.min.js',
+    // 'node_modules/lightgallery/modules/lg-fullscreen.min.js',
     // 'node_modules/jquery-countdown/dist/jquery.countdown.min.js',
     // 'node_modules/scrollreveal/dist/scrollreveal.min.js',
     'libs/**/*.js'

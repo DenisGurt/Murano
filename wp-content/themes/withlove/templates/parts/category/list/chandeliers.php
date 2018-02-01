@@ -44,33 +44,31 @@ if ($query->have_posts()) :
             <div class="content">
                 <?php the_title('<h3 class="product__title"><span>', '</span></h3>') ?>
                 <div class="product__desc"><?php the_content(); ?></div>
-                <div class="parameters">
-                    <?php if (!get_field('type') === 'single') : ?>
-                        <table>
-                            <?php if (get_field('height')) : ?>
-                                <tr>
-                                    <th><?php _e('Height', THEME_OPT); ?></th>
-                                    <td><?php the_field('height'); ?></td>
-                                </tr>
+                <?php if ($gallery = get_field('gallery')) : ?>
+                    <?php $first = true; ?>
+                    <div class="gallery">
+                        <?php foreach ($gallery as $item) : ?>
+                            <?php if ($first) : ?>
+                                <a class="gallery__link" href="<?php echo $item['url'] ?>" data-exthumbimage="<?php echo $item['sizes']['thumbnail'] ?>">
+                                    <svg class="gallery__icon" viewBox="0 0 89 88" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M.3 87.9h87.8V0H.3v87.9zM9.9 9.6h68.6V57L64.8 43.2l-7
+                                                     7L38 30.5l-28 28V9.6h-.1zm0 62.3l.1.1 28-27.9 19.8 19.8 7-7
+                                                     13.8 13.8v7.6H9.9v-6.4zm53-39.5c-3.81 0-6.9-3.09-6.9-6.9 0-3.81
+                                                     3.09-6.9 6.9-6.9 3.81 0 6.9 3.09 6.9 6.9 0 3.81-3.09 6.9-6.9 6.9z">
+                                        </path>
+                                    </svg>
+                                    <?php _e('Gallery', THEME_OPT); ?>
+                                </a>
+                                <?php $first = false; ?>
+                            <?php else : ?>
+                                <div class="item"
+                                     style="display: none"
+                                     data-src="<?php echo $item['url'] ?>"
+                                     data-exthumbimage="<?php echo $item['sizes']['thumbnail'] ?>"></div>
                             <?php endif; ?>
-                            <?php if (get_field('width')) : ?>
-                                <tr>
-                                    <th><?php _e('Width', THEME_OPT); ?></th>
-                                    <td><?php the_field('width'); ?></td>
-                                </tr>
-                            <?php endif; ?>
-                            <?php if (get_field('depth')) : ?>
-                                <tr>
-                                    <th><?php _e('Depth', THEME_OPT); ?></th>
-                                    <td><?php the_field('depth'); ?></td>
-                                </tr>
-                            <?php endif; ?>
-                        </table>
-                    <?php endif; ?>
-                </div>
-                <div class="gallery">
-                    <a href="#" class="gallery__class"><?php _e('Gallery', THEME_OPT); ?></a>
-                </div>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
                 <div class="price">
                     <?php
                     if (get_field('single_price')) {
@@ -116,7 +114,7 @@ if ($query->have_posts()) :
                 </div>
                 <div class="buttons">
                     <a href="<?php the_permalink(); ?>" class="btn primary-btn"><?php _e('Show more', THEME_OPT); ?></a>
-                    <a href="#" class="btn order-btn"><?php _e('Make an order', THEME_OPT); ?></a>
+                    <a href="#" class="btn order-btn"><?php _e('Contact with us', THEME_OPT); ?></a>
                 </div>
             </div>
         </section>
