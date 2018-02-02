@@ -1,0 +1,70 @@
+.modal-content {
+  flex-direction: row;
+  border-radius: 0;
+}
+.modal-image {
+  width: 30%;
+  background-image: url('../images/modal-bg.jpg');
+  background-position: 50%;
+  background-size: cover;
+}
+.modal-body {
+  width: 70%;
+  padding: 30px;
+  min-height: 800px;
+}
+.modal {
+  &__title {
+    font-family: $heading_ff;
+    text-transform: uppercase;
+    span {
+      display: inline-block;
+      border-bottom: 2px solid #116062;
+      padding: 0 0 10px;
+      margin: 0 0 20px;
+    }
+  }
+}
+
+.form-subtitle {
+  font-family: $heading_ff;
+  text-transform: uppercase;
+  font-size: 15px;
+  padding: 0 0 5px;
+  border-bottom: 1px solid #efefef;
+  line-height: 1.3;
+}
+.form-box {
+  margin: 0 0 20px;
+}
+
+/* Contact form 7 Override */
+
+.wpcf7-form {
+  label {
+    color: #757575;
+    font-size:  13px;
+  }
+
+  input:not([type=submit]),
+  select,
+  textarea {
+    width: 100%;
+    border-radius: 1px;
+    border: 1px solid #d2d2d2;
+    padding: 12px 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    background: transparent;
+    appearance: none;
+  }
+  textarea {
+    height: 150px;
+  }
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 920px;
+  }
+}

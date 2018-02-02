@@ -275,6 +275,11 @@ function sort_by_amount($a, $b) {
 }
 
 /**
+ * Shortcodes
+ */
+require get_parent_theme_file_path('/inc/shortcodes/cf7-shortcode.php');
+
+/**
  * Customizer additions.
  */
 require get_parent_theme_file_path( '/inc/customizer.php' );

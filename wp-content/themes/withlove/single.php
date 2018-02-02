@@ -79,10 +79,9 @@ get_header(); ?>
                                 }
                             ?>
                         </div>
-
-                        <div class="buttons">
-                            <a href="#" class="btn order-btn"><?php _e('Contact with us', THEME_OPT); ?></a>
-                        </div>
+                        <button type="button" class="btn order-btn" data-toggle="modal" data-target="#contactModal">
+                            <?php _e('Contact with us', THEME_OPT); ?>
+                        </button>
                     </div>
                     <div class="product-cart__thumb">
                         <?php
