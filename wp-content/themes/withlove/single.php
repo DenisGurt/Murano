@@ -10,9 +10,9 @@
  * @version 1.0
  */
 
-get_header(); ?>
+get_header();
 
-<?php the_title('<h1 class="sr-only">', '</h1>'); ?>
+the_title('<h1 class="sr-only">', '</h1>'); ?>
 
 <div id="product">
     <div id="sidebar">
@@ -75,7 +75,11 @@ get_header(); ?>
                                 if (get_field('type') === 'single') {
                                     get_template_part('templates/parts/product/single');
                                 } else {
-                                    get_template_part('templates/parts/product/variable');
+                                    if (is_mirror_cat(get_the_ID())) {
+                                        get_template_part('templates/parts/product/variable', 'mirror');
+                                    } else {
+                                        get_template_part('templates/parts/product/variable');
+                                    }
                                 }
                             ?>
                         </div>

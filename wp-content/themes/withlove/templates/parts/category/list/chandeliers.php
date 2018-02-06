@@ -31,16 +31,6 @@ $query = new WP_Query($args);
 if ($query->have_posts()) :
     while ($query->have_posts()) : $query->the_post(); ?>
         <section class="product">
-            <div class="thumbnail">
-                <?php
-                $image = get_field('thumb');
-
-                if (!empty($image)): ?>
-
-                    <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" />
-
-                <?php endif; ?>
-            </div>
             <div class="content">
                 <?php the_title('<h3 class="product__title"><span>', '</span></h3>') ?>
                 <div class="product__desc"><?php the_content(); ?></div>
@@ -116,6 +106,16 @@ if ($query->have_posts()) :
                     <a href="<?php the_permalink(); ?>" class="btn primary-btn"><?php _e('Show more', THEME_OPT); ?></a>
                     <a href="#" class="btn order-btn"><?php _e('Contact with us', THEME_OPT); ?></a>
                 </div>
+            </div>
+            <div class="thumbnail">
+                <?php
+                $image = get_field('thumb');
+
+                if (!empty($image)): ?>
+
+                    <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+                <?php endif; ?>
             </div>
         </section>
     <?php

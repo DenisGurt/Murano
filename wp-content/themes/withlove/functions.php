@@ -274,6 +274,16 @@ function sort_by_amount($a, $b) {
     return $a['amount'] - $b['amount'];
 }
 
+/* Check is mirror */
+function is_mirror_cat($post_id) {
+
+    $cat = get_field('category', $post_id);
+    if (in_array($cat, array('mirror', 'table'))) {
+        return true;
+    }
+    return false;
+}
+
 /**
  * Shortcodes
  */
