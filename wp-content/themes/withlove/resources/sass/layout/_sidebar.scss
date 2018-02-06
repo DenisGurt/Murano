@@ -4,35 +4,29 @@
   flex-wrap: nowrap;
   justify-content: center;
   align-items: flex-start;
-  width: 170px;
-  height: 100%;
-  position: fixed;
+  height: 100vh;
   background-color: #fff;
 
   .nav__menu {
+    width: 100%;
     margin: 0;
     padding: 0;
     list-style: none;
   }
 
   .nav__link {
-    border-bottom: none;
-    border-right: 2px solid transparent;
-    box-shadow: inset 0 1px 0 0 hsla(0,0%,100%,0);
-
 
     a {
       display: inline-block;
       width: 100%;
       padding: 10px 20px;
+      box-sizing: border-box;
 
       &:hover {
-        opacity: 1;
         background-color: #f9f9f9;
         text-decoration: none;
       }
 
-      opacity: .8;
       font-family: $heading_ff;
       font-size: 15px;
       font-weight: 500;
@@ -41,7 +35,6 @@
     }
 
     &--active {
-      opacity: 1;
       border-color: $main-color;
 
       a {
