@@ -137,6 +137,10 @@ function wl_scripts() {
 //    wp_enqueue_script( 'google-map', 'https://maps.googleapis.com/maps/api/js?key=' . $google_key, array(), false, true);
 
     wp_enqueue_script( 'wl-js', get_stylesheet_directory_uri() . '/assets/js/scripts.min.js', array('jquery'), false, true );
+    wp_localize_script( 'wl-js', 'wl_ajax', array(
+        'ajaxurl'        => admin_url( 'admin-ajax.php' ),
+        'nonce'          => wp_create_nonce( 'wl_nonce_field' )
+    ));
 }
 add_action( 'wp_enqueue_scripts', 'wl_scripts' );
 
@@ -274,25 +278,25 @@ function sort_by_amount($a, $b) {
     return $a['amount'] - $b['amount'];
 }
 
-/* Check is mirror */
-function is_mirror_cat($post_id) {
-
-    $cat = get_field('category', $post_id);
-    if (in_array($cat, array('mirror', 'table'))) {
-        return true;
-    }
-    return false;
-}
-
 /**
  * Shortcodes
  */
 require get_parent_theme_file_path('/inc/shortcodes/cf7-shortcode.php');
 
 /**
+ * AJAX handlers
+ */
+require get_parent_theme_file_path('/inc/ajax/filter-handler-interior-decor.php');
+
+/**
  * Customizer additions.
  */
 require get_parent_theme_file_path( '/inc/customizer.php' );
+
+/**
+ * Helpers
+ */
+require get_parent_theme_file_path( '/inc/helpers/helpers.php' );
 
 /**
  * Taxonomy meta

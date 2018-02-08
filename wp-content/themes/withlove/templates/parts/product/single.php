@@ -19,7 +19,7 @@ $post_id = get_the_ID();
         <th scope="col"><?php _e('Width', THEME_OPT); ?></th>
         <th scope="col"><?php _e('Depth', THEME_OPT); ?></th>
         <th scope="col"><?php _e('Weight', THEME_OPT); ?></th>
-        <?php if (is_mirror_cat($post_id)) : ?>
+        <?php if (is_mirror_cat($post_id) || is_decor_cat($post_id)) : ?>
             <th scope="col"><?php _e('Price ', THEME_OPT); ?></th>
         <?php endif; ?>
     </tr>
@@ -28,7 +28,7 @@ $post_id = get_the_ID();
         <td><?php the_field('width'); ?></td>
         <td><?php the_field('depth'); ?></td>
         <td><?php the_field('weight'); ?></td>
-        <?php if (is_mirror_cat($post_id)) : ?>
+        <?php if (is_mirror_cat($post_id) || is_decor_cat($post_id)) : ?>
             <td><b><?php the_field('single_price'); ?></b></td>
         <?php endif;     ?>
     </tr>

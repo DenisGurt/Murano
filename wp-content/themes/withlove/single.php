@@ -10,8 +10,9 @@
  * @version 1.0
  */
 
-get_header();
+$post_id = get_the_ID();
 
+get_header();
 the_title('<h1 class="sr-only">', '</h1>'); ?>
 
 <div id="product">
@@ -72,16 +73,35 @@ the_title('<h1 class="sr-only">', '</h1>'); ?>
                                     <td><?php _e('CHF', THEME_OPT); ?></td>
                             </table>
                             <?php
-                                if (get_field('type') === 'single') {
-                                    get_template_part('templates/parts/product/single');
+                            if (get_field('type') === 'single') {
+                                get_template_part('templates/parts/product/single');
+                            } else {
+                                if (is_mirror_cat($post_id)) {
+                                    get_template_part('templates/parts/product/variable', 'mirror');
+                                } elseif (is_decor_cat($post_id)) {
+                                    get_template_part('templates/parts/product/variable', 'decor');
                                 } else {
-                                    if (is_mirror_cat(get_the_ID())) {
-                                        get_template_part('templates/parts/product/variable', 'mirror');
-                                    } else {
-                                        get_template_part('templates/parts/product/variable');
-                                    }
+                                    get_template_part('templates/parts/product/variable');
                                 }
-                            ?>
+                            }
+
+                            if (get_field('set')) : ?>
+                                <h4 class="table-title"><?php _e('Set table', THEME_OPT); ?></h4>
+                                <table class="table table-sm table-striped set">
+                                    <tr>
+                                        <th scope="col"><?php _e('Title', THEME_OPT); ?></th>
+                                        <th scope="col"><?php _e('Price', THEME_OPT); ?></th>
+                                    </tr>
+                                    <?php if (have_rows('set_options')) : ?>
+                                        <?php while (have_rows('set_options')) : the_row(); ?>
+                                            <tr>
+                                                <td><?php the_sub_field('title'); ?></td>
+                                                <td><b><?php the_sub_field('price'); ?></b></td>
+                                            </tr>
+                                        <?php endwhile; ?>
+                                    <?php endif; ?>
+                                </table>
+                            <?php endif; ?>
                         </div>
                         <button type="button" class="btn order-btn" data-toggle="modal" data-target="#contactModal">
                             <?php _e('Contact with us', THEME_OPT); ?>
