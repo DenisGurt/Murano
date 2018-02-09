@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying filtering for Interior Decor category in taxonomy.php
+ * Template part for displaying filtering for Mirrors & Tables category in taxonomy.php
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -20,7 +20,7 @@ $term_slug = get_query_var('product_cat');
                 <?php if (get_field('category')) : ?>
                     <span><?php _e('Category', THEME_OPT); ?></span>
                     <select name="filter-cat" id="filter-cat">
-                        <option value="all"><?php _e('All', THEME_OPT); ?></option>
+                        <option><?php _e('All', THEME_OPT); ?></option>
                         <?php
                         $category = get_field_object('category');
                         if (isset($category['choices'])) :

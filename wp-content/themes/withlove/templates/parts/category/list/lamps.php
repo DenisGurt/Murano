@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying part for Chandeliers category in taxonomy.php
+ * Template part for displaying part for Table lamps category in taxonomy.php
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -27,12 +27,9 @@ $args = array(
 
 $query = new WP_Query($args);
 
-
 if ($query->have_posts()) :
     while ($query->have_posts()) : $query->the_post();
         get_template_part('templates/parts/category/content/content', $term_obj->slug);
     endwhile;
     wp_reset_postdata();
 endif;
-
-?>

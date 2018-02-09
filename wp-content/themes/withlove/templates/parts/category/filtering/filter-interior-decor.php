@@ -33,7 +33,7 @@ $term_slug = get_query_var('product_cat');
                 <?php endif; ?>
             </div>
             <input type="hidden" name="term_slug" value="<?php echo $term_slug; ?>">
-            <input type="hidden" name="action" value="wl_decor_filter">
+            <input type="hidden" name="action" value="wl_cat_filter">
         </form>
     </div>
 </section>

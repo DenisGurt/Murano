@@ -286,7 +286,7 @@ require get_parent_theme_file_path('/inc/shortcodes/cf7-shortcode.php');
 /**
  * AJAX handlers
  */
-require get_parent_theme_file_path('/inc/ajax/filter-handler-interior-decor.php');
+require get_parent_theme_file_path('/inc/ajax/filter-cat-handler.php');
 
 /**
  * Customizer additions.

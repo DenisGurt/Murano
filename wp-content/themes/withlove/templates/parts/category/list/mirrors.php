@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying part for Chandeliers category in taxonomy.php
+ * Template part for displaying part for Mirrors category in taxonomy.php
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -26,7 +26,6 @@ $args = array(
 );
 
 $query = new WP_Query($args);
-
 
 if ($query->have_posts()) :
     while ($query->have_posts()) : $query->the_post();

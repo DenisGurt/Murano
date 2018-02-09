@@ -1,5 +1,5 @@
 <?php
-function wl_decor_filter() {
+function wl_cat_filter() {
     $category = ($_POST['filter-cat']) ? sanitize_text_field($_POST['filter-cat']) : 'all';
     $term_slug = ($_POST['term_slug']) ? sanitize_text_field($_POST['term_slug']) : '';
     $meta_query = array();
@@ -40,5 +40,5 @@ function wl_decor_filter() {
     die();
 }
 
-add_action('wp_ajax_wl_decor_filter', 'wl_decor_filter');
-add_action('wp_ajax_nopriv_wl_decor_filter', 'wl_decor_filter');
+add_action('wp_ajax_wl_cat_filter', 'wl_cat_filter');
+add_action('wp_ajax_nopriv_wl_cat_filter', 'wl_cat_filter');
