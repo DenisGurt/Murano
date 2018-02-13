@@ -55,6 +55,20 @@ function wl_customize_register( $wp_customize ) {
         'settings'   => 'header_phone',
     ));
 
+    // Phone Mob
+    $wp_customize->add_setting('header_phone_mob', array(
+        'default'        => '',
+        'capability'     => 'edit_theme_options',
+        'type'           => 'theme_mod',
+
+    ));
+
+    $wp_customize->add_control('wl_header_phone_mob', array(
+        'label'      => __('Mob. Phone number', THEME_OPT),
+        'section'    => 'header_section',
+        'settings'   => 'header_phone_mob',
+    ));
+
     /**
      * Footer
      */

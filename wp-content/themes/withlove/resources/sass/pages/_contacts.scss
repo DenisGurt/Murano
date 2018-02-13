@@ -27,12 +27,16 @@
     list-style: none;
 
     li {
-      padding: 5px;
+      position: relative;
+      padding: 0 0 0 30px;
       font-size: 16px;
+      margin: 0 0 5px;
     }
     i {
+      position: absolute;
+      top: 5px;
+      left: 5px;
       color: $main-color;
-      margin-right: 5px;
     }
   }
 }

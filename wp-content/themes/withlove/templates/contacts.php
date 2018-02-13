@@ -17,15 +17,19 @@ get_header(); ?>
                     <ul class="contacts__list">
                         <li class="address">
                             <i class="fa fa-map-marker"></i>
-                            <?php _e('Brentani str. 11, 6900 Lugano, Switzerland', THEME_OPT); ?>
+                            <?php the_field('location') ?>
                         </li>
                         <li class="phone">
                             <i class="fa fa-phone"></i>
-                            +48 012 432 4323
+                            <?php echo get_theme_mod('header_phone'); ?>
+                        </li>
+                        <li class="phone-mob">
+                            <i class="fa fa-phone"></i>
+                            <?php echo get_theme_mod('header_phone_mob'); ?>
                         </li>
                         <li class="schedule">
                             <i class="fa fa-clock-o"></i>
-                            Mn - Fr 8:00 - 17:00
+                            <?php the_field('schedule'); ?>
                         </li>
                     </ul>
                 </div>

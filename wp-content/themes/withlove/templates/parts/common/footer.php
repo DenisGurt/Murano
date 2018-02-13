@@ -35,7 +35,8 @@
                 <div class="col-sm-4">
                     <div class="contact-us">
                         <div class="footer__title"><?php _e('Contact Us', THEME_OPT); ?></div>
-                        <div class="footer__phone">+48 012 432 4323</div>
+                        <div class="footer__phone"><?php echo get_theme_mod('header_phone'); ?></div>
+                        <div class="footer__phone"><?php echo get_theme_mod('header_phone_mob'); ?></div>
                         <div class="footer__email">
                             <a href="mailto:murano.art.gallery@gmail.com">murano.art.gallery@gmail.com</a>
                         </div>
