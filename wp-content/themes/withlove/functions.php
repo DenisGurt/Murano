@@ -306,6 +306,7 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
 /**
  * Helpers
  */
+require get_parent_theme_file_path( '/inc/wl-pages.php' );
 require get_parent_theme_file_path( '/inc/helpers/helpers.php' );
 
 /**

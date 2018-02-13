@@ -25,10 +25,8 @@ get_header(); ?>
 
 <?php the_title('<h1 class="sr-only">', '</h1>'); ?>
 
-<div id="category">
-    <div id="sidebar">
-        <?php get_sidebar(); ?>
-    </div>
+<div id="category" class="main">
+    <?php get_sidebar(); ?>
 
     <div id="content">
         <section class="banner parallax-bg" data-parallax="scroll" data-image-src="<?php echo $bg_src; ?>" data-speed="0.5">

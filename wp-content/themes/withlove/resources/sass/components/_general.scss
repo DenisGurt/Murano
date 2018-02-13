@@ -14,6 +14,20 @@ html,
   }
 }
 
+.main {
+  display: flex;
+
+  #sidebar {
+    width: 170px;
+    position: fixed;
+    box-shadow: 3px 0 6px rgba(0,0,0,.1);
+  }
+  #content {
+    width: calc(100% - 170px);
+    margin-left: auto;
+  }
+}
+
 .section {
   &__bg {
     height: 100vh;
