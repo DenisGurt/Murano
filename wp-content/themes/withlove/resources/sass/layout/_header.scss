@@ -1,0 +1,13 @@
+.header {
+  &__logo {
+    position: absolute;
+    right: 50px;
+    background: #fff;
+    margin-bottom: 15px;
+    z-index: 3;
+
+    img {
+      padding: 10px;
+    }
+  }
+}

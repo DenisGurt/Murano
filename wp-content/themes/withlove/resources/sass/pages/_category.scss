@@ -14,10 +14,15 @@
 
 /* Banner */
 .banner {
-  background-size: cover;
+  display: flex;
+  align-items: center;
   position: relative;
   padding: 100px;
   height: calc(100vh - 300px);
+
+  &.parallax-bg {
+    background: transparent;
+  }
 
   &:before {
     content: '';
@@ -37,6 +42,16 @@
     z-index: 2;
   }
 
+  .title-bg {
+    position: absolute;
+    font-size: 160px;
+    top: -165px;
+    left: 25px;
+    color: #fff;
+    opacity: 0.5;
+    font-family: 'Allyson Pro';
+  }
+
   &__title {
     display: inline-block;
     color: #fff;
@@ -53,10 +68,35 @@
 
 /* Filtering */
 .filtering {
-  padding: 50px 100px;
+  background: #212121;
+  color: $dark-color;
+  padding: 20px 50px 20px 100px;
+
   &__title {
     font-family: $heading_ff;
     text-transform: uppercase;
+  }
+
+  .filter {
+    &__cat {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__title {
+      position: relative;
+      padding-left: 25px;
+
+      &:before {
+        content: '\f0b0';
+        font-family: 'FontAwesome';
+        position: absolute;
+        left: 2px;
+        color: $main-color;
+        font-size: 20px;
+        top: -4px;
+      }
+    }
   }
 }
 

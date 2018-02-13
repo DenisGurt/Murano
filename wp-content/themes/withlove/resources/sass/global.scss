@@ -2,8 +2,10 @@
 @import "../node_modules/font-awesome/scss/font-awesome";
 @import "../node_modules/slick-carousel/slick/slick.scss";
 @import "../node_modules/lightgallery/dist/css/lightgallery";
+@import "../node_modules/styleselect/scss/styleselect";
 
 @import "utils/__utils";
+@import "plugins/__plugins";
 @import "components/__components";
 @import "layout/__layouts";
 

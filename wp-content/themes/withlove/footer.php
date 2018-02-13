@@ -12,12 +12,8 @@
  * @version 1.0
  */
 
-?>
 
-        <footer class="footer">
-
-        </footer>
-    <?php get_template_part('templates/parts/common/contact-modal'); ?>
+    get_template_part('templates/parts/common/contact-modal'); ?>
 
     </div><!-- #page -->
     <?php wp_footer(); ?>

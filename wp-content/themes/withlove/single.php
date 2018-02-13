@@ -75,7 +75,7 @@ the_title('<h1 class="sr-only">', '</h1>'); ?>
                             <?php
                             if (get_field('type') === 'single') {
                                 get_template_part('templates/parts/product/single');
-                            } else {
+                            } elseif (get_field('type')) {
                                 if (is_mirror_cat($post_id)) {
                                     get_template_part('templates/parts/product/variable', 'mirror');
                                 } elseif (is_decor_cat($post_id)) {
@@ -83,6 +83,8 @@ the_title('<h1 class="sr-only">', '</h1>'); ?>
                                 } else {
                                     get_template_part('templates/parts/product/variable');
                                 }
+                            } else {
+                                get_template_part('templates/parts/product/set', 'jewellery');
                             }
 
                             if (get_field('set')) : ?>

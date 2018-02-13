@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying part for Interior decor category in taxonomy.php
+ * Template part for make query category list in taxonomy.php
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -11,6 +11,16 @@
  */
 
 $term_obj = get_queried_object();
+$meta_query = array();
+
+if ($term_obj->slug === 'jewellery') {
+    $meta_query = array(
+        array(
+            'key'   => 'category',
+            'value' => 'set'
+        )
+    );
+}
 
 $args = array(
     'posts_per_page' => -1,
@@ -22,7 +32,8 @@ $args = array(
             'field'    => 'slug',
             'terms'    => $term_obj->slug,
         )
-    )
+    ),
+    'meta_query'     => $meta_query
 );
 
 $query = new WP_Query($args);
@@ -31,5 +42,4 @@ if ($query->have_posts()) :
     while ($query->have_posts()) : $query->the_post();
         get_template_part('templates/parts/category/content/content', $term_obj->slug);
     endwhile;
-    wp_reset_postdata();
 endif;

@@ -30,6 +30,10 @@
 
         <header class="header">
             <!-- Header section -->
-
+            <div class="header__logo">
+                <a href="<?php echo home_url(); ?>">
+                    <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/mag-logo.png" alt="Mag">
+                </a>
+            </div>
         </header>
 

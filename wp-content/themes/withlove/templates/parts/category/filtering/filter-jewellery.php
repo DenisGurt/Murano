@@ -1,6 +1,7 @@
 <?php
 /**
- * Template part for displaying filtering for Interior Decor category in taxonomy.php
+ * Template part for displaying filtering
+ * for Jewellery category in taxonomy.php
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -13,14 +14,12 @@
 $term_slug = get_query_var('product_cat');
 ?>
 <section class="filtering">
-<!--    <h2 class="filtering__title">Filtering</h2>-->
     <div class="filter">
         <form id="filter" method="post">
             <div class="filter__cat">
                 <?php if (get_field('category')) : ?>
                     <span class="filter__title"><?php _e('Filter by category', THEME_OPT); ?></span>
                     <select name="filter-cat" id="filter-cat">
-                        <option value="all"><?php _e('All', THEME_OPT); ?></option>
                         <?php
                         $category = get_field_object('category');
                         if (isset($category['choices'])) :

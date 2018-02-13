@@ -28,6 +28,7 @@
     "owl.carousel": "^2.2.0",
     "scrollreveal": "^3.3.6",
     "scss-mixins-collection": "^1.1.3",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "styleselect": "^1.0.3"
   }
 }

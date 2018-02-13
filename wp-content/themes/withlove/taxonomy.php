@@ -31,8 +31,9 @@ get_header(); ?>
     </div>
 
     <div id="content">
-        <section class="banner" style="background-image: url(<?php echo $bg_src; ?>);">
+        <section class="banner parallax-bg" data-parallax="scroll" data-image-src="<?php echo $bg_src; ?>" data-speed="0.5">
             <div class="banner__wrap">
+                <span class="title-bg"><?php echo $term_obj->name; ?></span>
                 <h1 class="banner__title">
                     <?php echo $term_obj->name; ?>
                 </h1>
@@ -45,8 +46,13 @@ get_header(); ?>
         <?php get_template_part('/templates/parts/category/filtering/filter', $term_slug); ?>
 
         <div id="category-list">
-            <?php get_template_part('/templates/parts/category/list/' . $term_slug); ?>
+            <?php get_template_part('/templates/parts/category/list'); ?>
         </div>
+
+        <?php
+        if (!is_home() && !is_front_page())
+            get_template_part('templates/parts/common/footer');
+        ?>
     </div>
 </div>
 

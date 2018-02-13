@@ -29,6 +29,7 @@ var vendor = [
     // 'node_modules/bootstrap/js/src/collapse.js',
     // 'node_modules/bootstrap/js/src/modal.js',
     // 'node_modules/owl.carousel/dist/owl.carousel.min.js',
+    'node_modules/styleselect/js/styleselect.js',
     'node_modules/slick-carousel/slick/slick.min.js',
     'node_modules/lightgallery/dist/js/lightgallery-all.min.js',
     // 'node_modules/lightgallery/modules/lg-thumbnail.min.js',
@@ -36,7 +37,7 @@ var vendor = [
     // 'node_modules/lightgallery/modules/lg-fullscreen.min.js',
     // 'node_modules/jquery-countdown/dist/jquery.countdown.min.js',
     // 'node_modules/scrollreveal/dist/scrollreveal.min.js',
-    'libs/**/*.js'
+    'libs-js/**/*.js'
 ];
 
 gulp.task('libs-scripts', function() {

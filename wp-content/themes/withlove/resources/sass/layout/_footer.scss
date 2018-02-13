@@ -1,0 +1,63 @@
+.footer {
+  background: #212121;
+  color: $dark-color;
+  padding: 50px 50px 40px 100px;
+
+  &__top {
+    padding: 0 0 40px;
+  }
+
+  &__bottom {
+    padding: 40px 0 0;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-family: $heading_ff;
+    font-size: 18px;
+    margin: 0 0 20px;
+  }
+
+  .social-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &__item {
+      display: inline-block;
+      margin-right: 5px;
+    }
+    &__link {
+      color: #a9a9a9;
+      font-size: 18px;
+      transition: $transition;
+
+      &:hover {
+        color: $main-color;
+      }
+    }
+  }
+  
+  &__phone {
+    line-height: 2;
+  }
+  
+  &__email {
+    line-height: 2;
+    a {
+      color: #a9a9a9;
+    }
+  }
+
+  .location {
+    padding-right: 50px;
+
+    p {
+      line-height: 2;
+    }
+  }
+  
+  .copyright {
+    color: #777;
+  }
+}

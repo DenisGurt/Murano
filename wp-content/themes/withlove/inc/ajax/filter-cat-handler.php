@@ -27,8 +27,8 @@ function wl_cat_filter() {
     );
 
     $the_query = new WP_Query($args);
-    if( $the_query->have_posts() ) :
-        while( $the_query->have_posts() ) : $the_query->the_post();
+    if ($the_query->have_posts()) {
+        while ($the_query->have_posts()) : $the_query->the_post();
             // Display 10 posts max
 //            if ($the_query->current_post > 9)
 //                break;
@@ -36,7 +36,7 @@ function wl_cat_filter() {
             echo load_template_part('templates/parts/category/content/content', $term_slug);
         endwhile;
         wp_reset_postdata();
-    endif;
+    }
     die();
 }
 
