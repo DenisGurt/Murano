@@ -41,7 +41,7 @@ get_header(); ?>
             </div>
         </section>
 
-        <?php get_template_part('/templates/parts/category/filtering/filter', $term_slug); ?>
+        <?php get_template_part('/templates/parts/category/filter'); ?>
 
         <div id="category-list">
             <?php get_template_part('/templates/parts/category/list'); ?>

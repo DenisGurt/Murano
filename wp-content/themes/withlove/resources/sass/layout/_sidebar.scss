@@ -46,10 +46,14 @@
       }
     }
   }
+}
+.delimiter {
+  font-size: 100px;
+  padding: 0 15px;
+  color: $main-color;
+  line-height: 0;
 
-  .delimiter {
-    margin: 20px 20px 20px 15px;
-    background: $main-color;
-    height: 2px;
+  &:before {
+    line-height: .8;
   }
 }

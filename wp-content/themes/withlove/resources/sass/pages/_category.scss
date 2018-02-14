@@ -57,6 +57,7 @@
   background: #212121;
   color: $dark-color;
   padding: 20px 50px 20px 100px;
+  z-index: 1;
 
   &__title {
     font-family: $heading_ff;
@@ -92,10 +93,23 @@
   align-items: center;
   background: linear-gradient(180deg,#e0e0e0 0,#efefef);
 
+  &:hover {
+    .thumbnail {
+      img {
+        transform: scale(1);
+      }
+    }
+  }
+
   .thumbnail {
     width: 40%;
     padding: 30px;
     text-align: center;
+
+    img {
+      transition: .7s;
+      transform: scale(0.8);
+    }
   }
   .content {
     width: 60%;

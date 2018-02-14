@@ -30,6 +30,11 @@
 
         <header class="header">
             <!-- Header section -->
+            <div class="header__lang">
+                <?php
+                pll_the_languages();
+                ?>
+            </div>
             <div class="header__logo">
                 <a href="<?php echo home_url(); ?>" class="header__brand">
                     <img src="<?php echo get_theme_mod( 'header_logo' ); ?>" alt="MAG">

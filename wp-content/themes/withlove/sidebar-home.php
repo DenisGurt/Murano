@@ -15,6 +15,11 @@ $args = array(
     'hide_empty' => false,
 );
 $terms = get_terms( $args );
+
+$about_pg = WLPages::get_about_pg();
+$about_pg_id = pll_get_post($about_pg->ID);
+$contact_pg = WLPages::get_contacts_pg();
+$contact_pg_id = pll_get_post($contact_pg->ID);
 ?>
 
 <nav class="nav-home">
@@ -29,6 +34,17 @@ $terms = get_terms( $args );
                     </a>
                 </li>
             <?php endforeach; ?>
+            <div class="delimiter fi flaticon-floral-design-of-delicate-shapes"></div>
+            <li class="nav-home__link">
+                <a href="<?php the_permalink($about_pg_id); ?>">
+                    <span><?php echo get_the_title($about_pg_id); ?></span>
+                </a>
+            </li>
+            <li class="nav-home__link">
+                <a href="<?php the_permalink($contact_pg_id); ?>">
+                    <span><?php echo get_the_title($contact_pg_id); ?></span>
+                </a>
+            </li>
         </ul>
     <?php endif; ?>
 </nav>

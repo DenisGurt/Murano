@@ -37,7 +37,12 @@ $contact_pg_id = pll_get_post($contact_pg->ID);
                             </a>
                         </li>
                     <?php endforeach; ?>
-                    <div class="delimiter"></div>
+                    <div class="delimiter fi flaticon-floral-design-of-delicate-shapes"></div>
+                    <li class="nav__link">
+                        <a href="<?php echo pll_home_url(); ?>">
+                            <span><?php _e('Home', THEME_OPT); ?></span>
+                        </a>
+                    </li>
                     <li class="nav__link">
                         <a href="<?php the_permalink($about_pg_id); ?>">
                             <span><?php echo get_the_title($about_pg_id); ?></span>
